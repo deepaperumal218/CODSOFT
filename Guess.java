@@ -2,9 +2,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Guess{
-
-    public static void main(String[] args) {
-
+    void guess(){
         int random, guess, attempts;
         Scanner s = new Scanner(System.in);
         Random key = new Random();
@@ -34,23 +32,36 @@ public class Guess{
             }
             if(attempts>5){
                 System.out.print("your attempts are completed");
-            } 
-            switch(attempts){
-                case (attempts==1){
+            }
+            if(guess==random){
+                switch(attempts){
+                    case (1):
                     System.out.print("your score is 100");
                     break;
-                }
-                case (attempts==2){
+                
+                    case (2):
                     System.out.print("your score is 90");
                     break;
-                }
-                case (attempts==3){
+                
+                    case (3):
                     System.out.print("your score is 80");
                     break;
+                    default:
+                    System.out.print("your score is 0");
                 }
-            }
-
                 
+            }
         } 
+    }
+    public static void main(String[] args) {
+        Guess g=new Guess();
+        g.guess();
+        System.out.print("you need to continue !! press one");
+        
+        Scanner s = new Scanner(System.in);
+        int choice=s.nextInt();
+        if (choice==1){
+             g.guess();
+        }
     }
 }
