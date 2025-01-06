@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.Random;
-
 public class Guess{
     void guess(){
         int random, guess, attempts;
@@ -8,7 +7,6 @@ public class Guess{
         Random key = new Random();
         random = key.nextInt(100)+1;
         attempts = 1; 
-
         System.out.print("Guess the number between 1 to 100");
         while(attempts<5) {
             guess = s.nextInt();
@@ -49,7 +47,6 @@ public class Guess{
                     default:
                     System.out.print("your score is 0");
                 }
-                
             }
         } 
     }
